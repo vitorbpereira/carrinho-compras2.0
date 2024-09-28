@@ -1,0 +1,141 @@
+/* Estilos gerais */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Define a fonte do corpo do documento */
+  background-color: #f7f9fc; /* Define a cor de fundo do corpo */
+  margin: 0; /* Remove margens padrão do corpo */
+  padding: 20px; /* Adiciona um preenchimento de 20px ao redor do corpo */
+  color: #333; /* Define a cor do texto */
+}
+
+h1 {
+  text-align: center; /* Centraliza o texto do cabeçalho h1 */
+  color: #2c3e50; /* Define a cor do texto do cabeçalho h1 */
+  margin-bottom: 30px; /* Adiciona uma margem inferior de 30px */
+}
+
+h2 {
+  color: #34495e; /* Define a cor do texto do cabeçalho h2 */
+  border-bottom: 2px solid #e0e0e0; /* Adiciona uma borda inferior de 2px */
+  padding-bottom: 10px; /* Adiciona um preenchimento inferior de 10px */
+  margin-bottom: 20px; /* Adiciona uma margem inferior de 20px */
+}
+
+/* Layout da aplicação */
+.container {
+  display: flex; /* Usa o modelo flexbox para o layout */
+  justify-content: space-between; /* Espaça os itens uniformemente */
+  max-width: 1000px; /* Define uma largura máxima para o contêiner */
+  margin: 0 auto; /* Centraliza o contêiner na página */
+  gap: 20px; /* Define um espaço de 20px entre os itens */
+}
+
+/* Estilos de listas e itens */
+ul {
+  list-style-type: none; /* Remove os marcadores de lista padrão */
+  padding: 0; /* Remove o preenchimento padrão da lista */
+  margin: 0; /* Remove a margem padrão da lista */
+}
+
+li {
+  display: flex; /* Usa o modelo flexbox para o item da lista */
+  justify-content: space-between; /* Espaça os conteúdos dentro do item */
+  align-items: center; /* Alinha verticalmente os itens ao centro */
+  padding: 15px 10px; /* Adiciona preenchimento de 15px vertical e 10px horizontal */
+  background-color: #fff; /* Define a cor de fundo do item da lista como branco */
+  border-radius: 8px; /* Adiciona bordas arredondadas ao item */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave ao item */
+  margin-bottom: 10px; /* Adiciona uma margem inferior de 10px entre os itens */
+  transition: transform 0.2s, box-shadow 0.2s; /* Anima as mudanças de transformação e sombra */
+}
+
+li:hover {
+  transform: translateY(-3px); /* Move o item 3px para cima ao passar o mouse */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Botões de ação */
+button {
+  background-color: #3498db; /* Define a cor de fundo do botão */
+  color: white; /* Define a cor do texto do botão como branco */
+  border: none; /* Remove a borda padrão do botão */
+  border-radius: 5px; /* Adiciona bordas arredondadas ao botão */
+  padding: 10px 15px; /* Adiciona preenchimento ao botão */
+  cursor: pointer; /* Muda o cursor para uma mão ao passar o mouse sobre o botão */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Anima as mudanças de cor e transformação */
+  font-size: 14px; /* Define o tamanho da fonte do botão */
+}
+
+button:hover {
+  background-color: #2980b9; /* Muda a cor de fundo ao passar o mouse */
+  transform: translateY(-2px); /* Move o botão 2px para cima ao passar o mouse */
+}
+
+button:active {
+  background-color: #1c6eaa; /* Muda a cor de fundo quando o botão é pressionado */
+}
+
+button.remove-btn {
+  background-color: #e74c3c; /* Define a cor de fundo do botão de remover como vermelho */
+}
+
+button.remove-btn:hover {
+  background-color: #bd3a2c; /* Muda a cor de fundo ao passar o mouse sobre o botão de remover */
+}
+
+/* Estilos do carrinho */
+.cart {
+  background-color: #ecf0f1; /* Define a cor de fundo do carrinho */
+  padding: 20px; /* Adiciona preenchimento ao carrinho */
+  border-radius: 8px; /* Adiciona bordas arredondadas ao carrinho */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave ao carrinho */
+}
+
+.cart h3 {
+  text-align: right; /* Alinha o texto do cabeçalho h3 à direita */
+  color: #2c3e50; /* Define a cor do texto do cabeçalho h3 */
+  font-weight: bold; /* Define o peso da fonte como negrito */
+  margin-top: 20px; /* Adiciona uma margem superior de 20px */
+}
+
+/* Estilos da lista de produtos */
+.product-list {
+  background-color: #ecf0f1; /* Define a cor de fundo da lista de produtos */
+  padding: 20px; /* Adiciona preenchimento à lista de produtos */
+  border-radius: 8px; /* Adiciona bordas arredondadas à lista de produtos */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave à lista de produtos */
+}
+
+/* Estilos para telas menores (responsividade) */
+@media (max-width: 768px) { /* Aplica estilos quando a largura da tela é menor ou igual a 768px */
+  .container {
+    flex-direction: column; /* Altera a direção do layout para coluna */
+    align-items: center; /* Alinha os itens ao centro */
+  }
+
+  .product-list, .cart {
+    width: 100%; /* Define a largura das listas como 100% */
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20px */
+  }
+}
+
+/* Adicionando uma animação de foco no botão */
+button:focus {
+  outline: none; /* Remove a borda de foco padrão */
+  box-shadow: 0 0 5px rgba(50, 150, 250, 0.7); /* Adiciona uma sombra ao redor do botão quando está focado */
+}
+
+input[type="text"] {
+  border: 1px solid #ccc; /* Adiciona uma borda leve */
+  border-radius: 4px; /* Bordas arredondadas */
+  font-size: 16px; /* Tamanho da fonte */
+}
+
+.voltar-btn {
+  background-color: #3498db; /* Cor de fundo azul */
+  color: white; /* Cor do texto branco */
+  border: none; /* Remove bordas */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 10px 15px; /* Preenchimento do botão */
+  cursor: pointer; /* Muda o cursor para uma mão ao passar o mouse */
+  margin-top: 20px; /* Margem superior */
+}
