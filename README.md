@@ -58,7 +58,5 @@ React App instalado, você pode instalar globalmente usando npm:</li>
   <li> Monte o ambiente do NodeJS e VSCode paara executar o projeto </li>
 </ol>
 
->Finalização do trabalho ~~~~~~~rever
-<p>Fiz um exemplo simples de um projeto em React para um carrinho de compras, onde consigo adicionar itens,
-remover, consultar, modificar itens e também mostro o comprovante após a finalizção da compra onde ele descrimina o nome de cada item e sua quantidade. </p>
-<p>Também me preocupei ao adicionar um item com o valor mínimo (1) e sempre que o mesmo item é adicionado a quantiade dele é alterada automaticamente.</p>
+>Finalização do trabalho
+<p>O trabalho foi feito com tudo que foi solicitado acima pelo professor com adicional de colocar imagens dos itens.</p>
