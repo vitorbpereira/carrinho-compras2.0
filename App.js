@@ -2,13 +2,14 @@ import React, { useState } from 'react'; // Importa React e o hook useState
 import ReactDOM from "https://esm.sh/react-dom"; // Importa ReactDOM para renderização
 import './App.css'; // Importa o arquivo de estilos CSS
 
-// Define um array de produtos com id, nome e preço
+// Define um array de produtos com id, nome, preço e imagem do item
 const dadosProdutos = [
-  { id: 1, nome: "Maçã", preco: 1.5 },
-  { id: 2, nome: "Banana", preco: 1.0 },
-  { id: 3, nome: "Laranja", preco: 2.0 },
-  { id: 4, nome: "Leite", preco: 3.0 },
-  { id: 5, nome: "Pão", preco: 2.5 },
+  { id: 1, nome: "Maçã", preco: 1.5, imagem: "https://i.pinimg.com/originals/84/cc/dc/84ccdcf14badb1fe1030ef3e421dc374.png" },
+  { id: 2, nome: "Banana", preco: 1.0 , imagem: "https://i.pinimg.com/736x/38/1f/ae/381fae890b6d2e3aef851949e261a13a.jpg"},
+  { id: 3, nome: "Laranja", preco: 2.0 , imagem:"https://i.pinimg.com/originals/52/08/b0/5208b0e909679fb39313e644b59483d9.png"},
+  { id: 4, nome: "Leite", preco: 3.0 , imagem:"https://png.pngtree.com/png-vector/20240205/ourmid/pngtree-milk-bottle-dairy-product-png-image_11543900.png"},
+  { id: 5, nome: "Pão", preco: 2.5 , imagem:"https://i.pinimg.com/originals/b8/bd/dd/b8bdddabafd4892124d854dfecdb4a63.jpg"},
+  { id: 6, nome: "Kiwi", preco: 3.00 , imagem:"https://i.pinimg.com/736x/58/14/52/581452ef10a7cb0a8d0223e489bb5113.jpg"}
 ];
 
 // Função para formatar o preço em reais
@@ -44,22 +45,27 @@ function ListaProdutos({ produtos, adicionarAoCarrinho, termoPesquisa }) {
     <div>
       <h2>Produtos</h2>
       <ul>
-        {produtosFiltrados.map((produto) => ( // Mapeia os produtos filtrados, Cada item da lista, Exibe nome e preço, Botão para adicionar ao carrinho
-          <li key={produto.id}>  
-            {produto.nome} - {formatarPreco(produto.preco)} 
-            <input
-              type="number" // Tipo numérico para quantidade
-              min="1" // Valor mínimo é 1
-              value={quantidades[produto.id] || 1} // Define valor da quantidade
-              onChange={(e) => handleQuantidadeChange(produto.id, Number(e.target.value))} // Atualiza a quantidade no estado
-              style={{ width: '60px', marginLeft: '10px', marginRight: '10px' }} // Estilo da caixa de entrada
+        {produtosFiltrados.map((produto) => (
+          <li key={produto.id}>
+            <img 
+              src={produto.imagem} 
+              alt={produto.nome} 
+              style={{ width: '50px', marginRight: '10px' }} // Ajuste o estilo conforme necessário
             />
-            <button onClick={() => handleAdicionarAoCarrinho(produto)}>Adicionar ao Carrinho</button> 
+            {produto.nome} - {formatarPreco(produto.preco)}
+            <input
+              type="number"
+              min="1"
+              value={quantidades[produto.id] || 1}
+              onChange={(e) => handleQuantidadeChange(produto.id, Number(e.target.value))}
+              style={{ width: '60px', marginLeft: '10px', marginRight: '10px' }}
+            />
+            <button onClick={() => handleAdicionarAoCarrinho(produto)}>Adicionar ao Carrinho</button>
           </li>
         ))}
       </ul>
     </div>
-  );
+  );  
 }
 
 // Componente que exibe o carrinho de compras
