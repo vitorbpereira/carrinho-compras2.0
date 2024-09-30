@@ -59,4 +59,4 @@ React App instalado, você pode instalar globalmente usando npm:</li>
 </ol>
 
 >Finalização do trabalho
-<p>O trabalho foi feito com tudo que foi solicitado acima pelo professor com adicional de colocar imagens dos itens.</p>
+<p>O trabalho foi feito com tudo que foi solicitado acima pelo professor, pois fiz um adicional ao trabalho incluindo imagens aos itens do carrinho.</p>
